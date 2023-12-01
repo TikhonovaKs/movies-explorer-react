@@ -1,0 +1,186 @@
+.student {
+  padding-top: 110px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #202020;
+}
+
+@media screen and (max-width: 768px) {
+  .student {
+    padding-top: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .student {
+    padding-left: 14px;
+    padding-top: 70px;
+    padding-right: 14px;
+  }
+}
+
+.student__profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 66px;
+  max-width: 1140px;
+}
+
+@media screen and (max-width: 620px) {
+  .student__profile {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .student__profile {
+    max-width: 292px;
+    min-height: 261px;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.student__info {
+  display: flex;
+  flex-direction: column;
+  height: 327px;
+}
+
+@media screen and (max-width: 768px) {
+  .student__info {
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .student__info {
+    height: 262px;
+  }
+  .student__info:nth-child(1) {
+    order: 2;
+  }
+}
+
+.student__name {
+  color: #fff;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -2px;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .student__name {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .student__name {
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+}
+
+.student__job {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .student__job {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .student__job {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+}
+
+.student__about {
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 600px;
+  font-weight: 400;
+  font-feature-settings: 'clig' off, 'liga' off;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .student__about {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 20px;
+    max-width: 364px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .student__about {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.student__image {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .student__image {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .student__image {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .student__image {
+    width: 292px;
+    height: 352px;
+  }
+}
+
+.student__github {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .student__github {
+    margin-top: 40px;
+  }
+}
