@@ -1,8 +1,8 @@
 import checkResponse from './checkResponse';
 
-export const BASE_URL = 'http://localhost:3000';
+// export const BASE_URL = 'http://localhost:3000';
 // export const BASE_URL = 'https://kseniia-mesto.nomoreparties.sbs';
-// export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'api.diploma-kseniia.nomoredomainsicu.ru';
 
 export const register = (name, email, password) => {
   return fetch(`${BASE_URL}/signup`, {
