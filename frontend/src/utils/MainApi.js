@@ -2,7 +2,7 @@ import checkResponse from './checkResponse';
 
 //export const BASE_URL = 'http://localhost:3000';
 // export const BASE_URL = 'https://kseniia-mesto.nomoreparties.sbs';
-export const BASE_URL = 'api.diploma-kseniia.nomoredomainsicu.ru';
+export const BASE_URL = 'http://api.diploma-kseniia.nomoredomainsicu.ru';
 
 // export const editProfileInfo = ({ email, name, jwt}) => {
 //   return fetch(`${BASE_URL}/users/me`, {
