@@ -22,6 +22,7 @@ app.use(requestLogger); // подключаем логгер запросов
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
   'https://api.diploma-kseniia.nomoredomainsicu.ru/',
+  'https://diploma-kseniia.nomoredomainsmonster.ru',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
