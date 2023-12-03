@@ -1,0 +1,83 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 676px;
+}
+
+@media screen and (max-width: 1100px) {
+  .navigation {
+    width: 400px;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 18px;
+  align-self: center;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__list {
+    display: none;
+  }
+}
+
+.navigation__button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 13px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navigation__item {
+  margin-right: 16px;
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.navigation__account {
+  color: white;
+  text-decoration: none;
+  align-self: center;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #313131;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  height: 16px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__account {
+    display: none;
+  }
+}
+
+.navigation__hidden-menu {
+  display: none;
+  background-image: url(../../images/icon-hamburger-button.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #202020;
+  padding: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__hidden-menu {
+    display: block;
+  }
+}

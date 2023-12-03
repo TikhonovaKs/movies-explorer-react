@@ -1,0 +1,12 @@
+.logo {
+  max-width: 38px;
+  max-height: 38px;
+  padding: 0;
+  align-self: start;
+}
+
+@media screen and (max-width: 430px) {
+  .logo_center {
+    align-self: center;
+  }
+}

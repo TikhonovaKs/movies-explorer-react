@@ -1,0 +1,58 @@
+.toggle {
+  max-width: 1140px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  margin-top: 30px;
+  margin-bottom: 39px;
+}
+
+.toggle__tumbler {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #8b8b8b;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.toggle__slider::before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle__checkbox:checked + .toggle__slider {
+  background-color: #3ddc84;
+}
+
+.toggle__checkbox:checked + .toggle__slider::before {
+  transform: translateX(16px);
+}
+
+.toggle__name {
+  margin-left: 10px;
+}

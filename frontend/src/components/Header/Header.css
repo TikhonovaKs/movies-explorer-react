@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  max-width: 1280px;
+  margin: 0;
+  justify-content: space-between;
+  padding: 18px 70px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 18px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 18px 14px;
+  }
+}
+
+.header_type_grey {
+  background-color: #202020;
+}
+
+.header_type_green {
+  background-color: #073042;
+}
