@@ -95,11 +95,11 @@ function Register({ handleRegister }) {
                 message: 'Password is required!',
               },
               minLength: {
-                value: 2,
-                message: 'Minimum length is 2',
+                value: 8,
+                message: 'Minimum length is 8',
               },
               maxLength: {
-                value: 200,
+                value: 40,
                 message: 'Maximum length is 200',
               },
             })}
