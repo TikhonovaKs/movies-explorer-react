@@ -2,9 +2,9 @@ import React from 'react';
 import './AboutProject.css';
 import BlockTitle from '../BlockTitle/BlockTitle.js';
 
-function AboutProject() {
+const AboutProject = React.forwardRef((props, forwardedRef) => {
   return (
-    <section className="about">
+    <section className="about" id="aboutProject" ref={forwardedRef}>
       <BlockTitle title="О проекте" />
       <div className="about__info">
         <div className="about__paragraph">
@@ -28,5 +28,6 @@ function AboutProject() {
       </div>
     </section>
   );
-}
+});
+
 export default AboutProject;

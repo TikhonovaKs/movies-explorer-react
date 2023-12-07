@@ -2,9 +2,9 @@ import React from 'react';
 import './Techs.css';
 import BlockTitle from '../BlockTitle/BlockTitle.js';
 
-function Techs() {
+const Techs = React.forwardRef((props, forwardedRef) => {
   return (
-    <section className="technologies">
+    <section className="technologies" id="techs" ref={forwardedRef}>
       <BlockTitle title="Технологии" />
       <h2 className="technologies__title">7 технологий</h2>
       <p className="technologies__description">
@@ -21,5 +21,5 @@ function Techs() {
       </ul>
     </section>
   );
-}
+});
 export default Techs;

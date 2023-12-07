@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './Main.css';
 import Promo from '../Promo/Promo.js';
 import NavTab from '../NavTab/NavTab.js';
@@ -7,13 +7,28 @@ import Techs from '../Techs/Techs.js';
 import AboutMe from '../AboutMe/AboutMe.js';
 
 function Main() {
+  // Создаем объект forwardedRefs, в котором будут храниться рефы для каждого раздела
+  const forwardedRefs = {
+    aboutProject: useRef(null),
+    techs: useRef(null),
+    aboutMe: useRef(null),
+  };
+
+  function handleNavigationClick(e) {
+    const buttonName = e.target.attributes.name.value;
+    const navElement = forwardedRefs[buttonName].current;
+    if (navElement) {
+      navElement.scrollIntoView({ behavior: 'auto' });
+    }
+  }
+
   return (
     <main className='main'>
       <Promo />
-      <NavTab />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
+      <NavTab handleNavigationClick={handleNavigationClick}/>
+      <AboutProject ref={forwardedRefs.aboutProject} />
+      <Techs ref={forwardedRefs.techs} />
+      <AboutMe ref={forwardedRefs.aboutMe} />
     </main>
   );
 }

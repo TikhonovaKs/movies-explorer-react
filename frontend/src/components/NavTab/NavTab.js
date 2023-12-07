@@ -1,19 +1,19 @@
 import React from 'react';
 import './NavTab.css';
 
-function NavTab() {
+function NavTab({ handleNavigationClick }) {
   return (
     <ul className="menu">
-    <li className="menu__list-link">
-      <a className="menu__link" href="#">О проекте</a>
-    </li>
-    <li className="menu__list-link">
-      <a className="menu__link" href="#">Технологии</a>
-    </li>
-    <li className="menu__list-link">
-      <a className="menu__link" href="#" >Студент</a>
-    </li>
-  </ul>
+      <li className="menu__list-link menu__link" onClick={handleNavigationClick} name="aboutProject">
+        О проекте
+      </li>
+      <li className="menu__list-link menu__link" onClick={handleNavigationClick} name="techs">
+        Технологии
+      </li>
+      <li className="menu__list-link menu__link" onClick={handleNavigationClick} name="aboutMe">
+        Студент
+      </li>
+    </ul>
   );
 }
 export default NavTab;

@@ -4,9 +4,9 @@ import BlockTitle from '../BlockTitle/BlockTitle.js';
 import myPhoto from '../../images/my-photo.png';
 import Portfolio from '../Portfolio/Portfolio.js';
 
-function AboutMe() {
+const AboutMe = React.forwardRef((props, forwardedRef) =>  {
   return (
-    <section className="student">
+    <section className="student" id="aboutMe" ref={forwardedRef}>
       <BlockTitle title="Студент" />
       <div className="student__profile">
         <div className="student__info">
@@ -26,6 +26,6 @@ function AboutMe() {
       <Portfolio />
     </section>
   );
-}
+});
 
 export default AboutMe;
