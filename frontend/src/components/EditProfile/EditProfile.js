@@ -54,7 +54,7 @@ function EditProfile({ onUpdateUser }) {
               },
               validate: {
                 validateDuplicateValues: (_, values) => {
-                  return values.name !== currentUser.name;
+                  return values.name !== currentUser.name || values.email !== currentUser.email;
                 },
               },
             })}
@@ -88,7 +88,7 @@ function EditProfile({ onUpdateUser }) {
               },
               validate: {
                 validateDuplicateValues: (_, values) => {
-                  return values.email !== currentUser.email;
+                  return values.email !== currentUser.email || values.name !== currentUser.name;
                 },
               },
             })}
