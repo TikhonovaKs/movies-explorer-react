@@ -60,6 +60,7 @@ function EditProfile({ onUpdateUser }) {
             })}
             type="text"
             className="authentication__input"
+            defaultValue={currentUser.name}
           />
           {errors?.name && <div className="authentication__error">{errors.name.message}</div>}
         </div>
@@ -93,6 +94,7 @@ function EditProfile({ onUpdateUser }) {
             })}
             type="text"
             className="authentication__input"
+            defaultValue={currentUser.email}
           />
           {errors?.email && <div className="authentication__error">{errors.email.message}</div>}
         </div>

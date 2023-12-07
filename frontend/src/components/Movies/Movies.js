@@ -21,6 +21,8 @@ function Movies({ allMoviesFromPublicApi, path }) {
   const [savedMoviesList, setSavedMoviesList] = React.useState([]);
   //состояние загрузки фильмов
   const [isLoading, setIsLoading] = React.useState(false);
+  // -----
+  const [searchKeyword, setSearchKeyword] = React.useState('');
 
   // Эффект отображения фильмов на странице "Фильмы" и "Сохраненные фильмы"
   React.useEffect(() => {
@@ -58,6 +60,9 @@ function Movies({ allMoviesFromPublicApi, path }) {
 
 
   const handleSearch = (keyword, setError) => {
+// ------
+    setSearchKeyword(keyword);
+
     if (path === '/movies') {
       const resultMovies = allMoviesFromPublicApi.filter((movie) =>
         movie.nameRU.toLowerCase().includes(keyword.toLowerCase())       
@@ -187,6 +192,8 @@ function Movies({ allMoviesFromPublicApi, path }) {
           handleSaveMovies={handleSaveMovies}
           savedMoviesList={savedMoviesList}
           isLoading={isLoading}
+          //-----
+          searchKeyword={searchKeyword}
         />
       </ShortMoviesContext.Provider>
     </div>

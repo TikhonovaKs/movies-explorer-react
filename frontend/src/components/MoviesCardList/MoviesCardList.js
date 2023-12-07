@@ -4,7 +4,7 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard.js';
 import Preloader from '../Preloader/Preloader';
 
-function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, isLoading }) {
+function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, isLoading, searchKeyword }) {
   const { isScreenXl, isScreenMd, isScreenSm } = useResize();
 
   // Отображение нужного кол.ва карточек в зависимости отразмера экрана
@@ -28,22 +28,21 @@ function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, i
       setVisibleMoviesFromList((prevValue) => prevValue + 16);
     }
   };
-  
-  const sourceMoviesList = 
-  path === '/movies'
-  ? moviesList
-  : savedMoviesList;
+
+  const sourceMoviesList = path === '/movies' ? moviesList : savedMoviesList;
 
   const cards = sourceMoviesList
-          .slice(0, visibleMoviesFromList)
-          .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} />);
+    .slice(0, visibleMoviesFromList)
+    .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} />);
 
   // ...убираем видимость кнопки Еще
   const isButtonHidden = visibleMoviesFromList >= sourceMoviesList.length;
 
-  // Если еще ни разу не искались фильмы
-  if (sourceMoviesList.length === 0) {
+  // Если еще ни разу не искались фильмы или ничего не найдено
+  if (sourceMoviesList.length === 0 && searchKeyword.length === 0) {
     return <p className="elements__error">Начните поиск фильмов</p>;
+  } else if (sourceMoviesList.length === 0 && searchKeyword.length !== 0) {
+    return <p className="elements__error">Ничего не найдено</p>;
   }
 
   return (
