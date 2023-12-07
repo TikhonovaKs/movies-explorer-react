@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import './FilterCheckbox.css';
 import ShortMoviesContext from '../../contexts/ShortMoviesContext';
 
-function FilterCheckbox({ handleShortMovies }) {
+function FilterCheckbox({ handleShortMovies, useCache }) {
   const initIsSharedMovies = useContext(ShortMoviesContext);
-  const [isActive, setIsActive] = React.useState(initIsSharedMovies);
+  const [isActive, setIsActive] = React.useState(useCache?initIsSharedMovies:false);
 
   function handleToggle() {
+    if(useCache)
     localStorage.setItem('isShortMoviesActive', !isActive);
     setIsActive((prevIsActive) => !prevIsActive);
     handleShortMovies(!isActive);

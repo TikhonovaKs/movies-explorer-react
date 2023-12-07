@@ -178,7 +178,7 @@ function App() {
                 element={
                   <>
                     <Header backgroundName="grey" />
-                    <Movies allMoviesFromPublicApi={allMoviesFromPublicApi} path="/movies" />
+                    <Movies useCache={true} allMoviesFromPublicApi={allMoviesFromPublicApi} path="/movies" key={"movies"}/>
                     <Footer />
                   </>
                 }
@@ -194,7 +194,7 @@ function App() {
                 element={
                   <>
                     <Header backgroundName="grey" />
-                    <Movies />
+                    <Movies useCache={false} key={"savedMovies"} />
                     <Footer />
                   </>
                 }

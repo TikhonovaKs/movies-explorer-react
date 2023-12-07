@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import './SearchForm.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox.js';
 
-function SearchForm({ handleSearch, handleShortMovies }) {
-  const [currentKeyword, setCurrentKeyword] = React.useState(localStorage.getItem('keywordFilter'));
+function SearchForm({ handleSearch, handleShortMovies, useCache }) {
+  const [currentKeyword, setCurrentKeyword] = React.useState(useCache?localStorage.getItem('keywordFilter'):null);
 
   const {
     register,
@@ -17,8 +17,9 @@ function SearchForm({ handleSearch, handleShortMovies }) {
 
   // Обработчик изменения полей формы:
   const onSubmit = ({ keyword }) => {
-    localStorage.setItem('keywordFilter', keyword);
-    setCurrentKeyword(keyword);
+    if (useCache) 
+     localStorage.setItem('keywordFilter', keyword);
+    setCurrentKeyword(keyword); 
 
     handleSearch(keyword, setError);
   };
@@ -46,7 +47,7 @@ function SearchForm({ handleSearch, handleShortMovies }) {
         <button className="search__button">Найти</button>
       </form>
       {errors?.keyword && <div className="search__error">{errors.keyword.message}</div>}
-      <FilterCheckbox handleShortMovies={handleShortMovies} />
+      <FilterCheckbox handleShortMovies={handleShortMovies} useCache={useCache} /> 
     </div>
   );
 }

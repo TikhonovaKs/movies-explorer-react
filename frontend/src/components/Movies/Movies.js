@@ -6,15 +6,17 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.js';
 import ShortMoviesContext from '../../contexts/ShortMoviesContext';
 
-function Movies({ allMoviesFromPublicApi, path }) {
+function Movies({ allMoviesFromPublicApi, path,useCache }) {
   const isShortMovie = (areShortSelected, movie) => {
     if (!areShortSelected)
       return true;
     return movie.duration < 40;
   };
-  const [areShortMovies, setAreShortMovies] = React.useState(localStorage.getItem('isShortMoviesActive') === "true" ?? false);
+  const [areShortMovies, setAreShortMovies] = React.useState((localStorage.getItem('isShortMoviesActive') === "true" && useCache) ?? false);
 
-  const initValueOfMoviesList = JSON.parse(localStorage.getItem('latestFilteredMovies'))?? []; // ?? - проверяем на null
+  const initValueOfMoviesList = useCache
+    ? JSON.parse(localStorage.getItem('latestFilteredMovies'))?? [] // ?? - проверяем на null
+    : [];
   const [originMovies, setOriginMovies] = React.useState(initValueOfMoviesList);
   const [moviesList, setMoviesList] = React.useState(initValueOfMoviesList.filter(p=>isShortMovie(areShortMovies, p)));
   const [savedOriginMovies, setSavedOriginMovies] = React.useState([]);
@@ -80,7 +82,8 @@ function Movies({ allMoviesFromPublicApi, path }) {
       setMoviesList(resultMovies.filter(movie=> isShortMovie(areShortMovies, movie)));
 
       // Сохранить полученные фильмы в локал хранилище (только для поисковых фильмов)
-      localStorage.setItem('latestFilteredMovies', JSON.stringify(resultMovies));
+  if (useCache) 
+  localStorage.setItem('latestFilteredMovies', JSON.stringify(resultMovies));
     } else {
       const resultMovies = keyword
         ? savedMoviesList.filter((movie) => isShortMovie(areShortMovies,movie)&& movie.nameRU.toLowerCase().includes(keyword.toLowerCase()))
@@ -185,7 +188,7 @@ function Movies({ allMoviesFromPublicApi, path }) {
   return (
     <div className="movies">
       <ShortMoviesContext.Provider value={areShortMovies}>
-        <SearchForm handleSearch={handleSearch} handleShortMovies={handleShortMovies} />
+        <SearchForm handleSearch={handleSearch} handleShortMovies={handleShortMovies} useCache={useCache} />
         <MoviesCardList
           moviesList={moviesList}
           path={path}
