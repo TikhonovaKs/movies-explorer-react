@@ -162,7 +162,7 @@ function App() {
             path="/"
             element={
               <>
-                <Header backgroundName="green" />
+                <Header backgroundName="green" isLoggedIn={loggedIn} />
                 <Main />
                 <Footer />
               </>

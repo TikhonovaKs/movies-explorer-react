@@ -5,18 +5,18 @@ import Logo from '../Logo/Logo.js';
 import NavAuth from '../NavAuth/NavAuth.js';
 import Navigation from '../Navigation/Navigation';
 
-function Header({ backgroundName }) {
+function Header({ backgroundName, isLoggedIn }) {
   const location = useLocation();
-  console.log(location);
 
   const hasNavigation = ['/movies', '/profile', '/saved-movies'].includes(location.pathname);
+  const isLoggedInNavigation =  hasNavigation || isLoggedIn;
 
   return (
     <header className={`header header_type_${backgroundName}`}>
       <Link to="/">
         <Logo />
       </Link>
-      {hasNavigation ? <Navigation /> : <NavAuth />}
+      {isLoggedInNavigation ? <Navigation /> : <NavAuth />}
     </header>
   );
 }
