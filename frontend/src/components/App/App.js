@@ -2,6 +2,7 @@
 import React from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { ProtectedRoute } from '../ProtectedRoute/ProtectedRoute';
+import { UnprotectedRoute } from '../UnprotectedRoute/UnprotectedRoute.js';
 
 import * as auth from '../../utils/auth';
 
@@ -26,8 +27,8 @@ function App() {
   const [loggedIn, setLoggedIn] = React.useState(localStorage.getItem('jwt') && true);
   const [updatedUser, setUpdatedUser] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({});
-   //switch state for InfoTooltip:
-   const [isInfoTooltipPopupOpen, setIsInfoTooltipPopupOpen] = React.useState(false);
+  //switch state for InfoTooltip:
+  const [isInfoTooltipPopupOpen, setIsInfoTooltipPopupOpen] = React.useState(false);
 
   const checkToken = () => {
     const jwt = localStorage.getItem('jwt');
@@ -38,8 +39,8 @@ function App() {
           setLoggedIn(true);
           setCurrentUser({
             name: res.data.name,
-            email: res.data.email
-          })
+            email: res.data.email,
+          });
         })
         .catch((err) => {
           setLoggedIn(false);
@@ -115,8 +116,8 @@ function App() {
         console.log(err);
       })
       .finally(() => {
-        setIsInfoTooltipPopupOpen(true)
-      })
+        setIsInfoTooltipPopupOpen(true);
+      });
   }
 
   function closeAllPopups() {
@@ -203,19 +204,30 @@ function App() {
           <Route
             path="/signup"
             element={
-              <>
-                <Register handleRegister={handleRegister} />
-              </>
+              <UnprotectedRoute
+                isLoggedIn={loggedIn}
+                element={
+                  <>
+                    <Register handleRegister={handleRegister} />
+                  </>
+                }
+              />
             }
           ></Route>
           <Route
             path="/signin"
             element={
-              <>
-                <Login handleLogin={handleLogin} />
-              </>
+              <UnprotectedRoute
+                isLoggedIn={loggedIn}
+                element={
+                  <>
+                    <Login handleLogin={handleLogin} />
+                  </>
+                }
+              />
             }
           ></Route>
+
           <Route
             path="/profile"
             element={
@@ -224,9 +236,7 @@ function App() {
                 element={
                   <>
                     <Header backgroundName="grey" />
-                    <Profile
-                      handleSignout={handleSignout}
-                    />
+                    <Profile handleSignout={handleSignout} />
                   </>
                 }
               />
