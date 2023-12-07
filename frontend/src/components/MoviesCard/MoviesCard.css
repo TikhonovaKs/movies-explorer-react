@@ -93,3 +93,9 @@
 .element__save-button_is-active {
   background: url(../../images/save-checkbox-active.svg) center center no-repeat;
 }
+
+.element__delete-button_is-active {
+  background: url(../../images/d8.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

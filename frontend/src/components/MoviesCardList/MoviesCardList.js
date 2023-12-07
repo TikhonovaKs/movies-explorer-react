@@ -33,7 +33,7 @@ function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, i
 
   const cards = sourceMoviesList
     .slice(0, visibleMoviesFromList)
-    .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} />);
+    .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} path={path}/>);
 
   // ...убираем видимость кнопки Еще
   const isButtonHidden = visibleMoviesFromList >= sourceMoviesList.length;
