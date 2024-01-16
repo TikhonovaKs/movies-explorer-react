@@ -1,12 +1,11 @@
 # movies-explorer-react
 The final project on the web faculty at Yandex.Practicum
 
-***This is a service where you can search for movies on demand and save them in your personal account.***
-
+***This is a service where you can search for movies on demand and save them in your personal account.***>
 
 ## Tools and stack: 
 HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
-
+<br />
 
 ## Here's what was done:
 * set up infrastructure and created Express server;
