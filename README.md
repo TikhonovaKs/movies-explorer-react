@@ -1,4 +1,4 @@
-# movies-explorer-react
+# Study project "movies-explorer-react"
 The final project on the web faculty at Yandex.Practicum
 
 ***This is a service where you can search for movies on demand and save them in your personal account.***>
