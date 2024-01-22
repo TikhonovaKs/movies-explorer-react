@@ -20,8 +20,10 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 
 
 ## Project links
-* Web site link: https://diploma-kseniia.nomoredomainsmonster.ru/
-* Figma project: https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev
+### Website
+[Visit our website](https://diploma-kseniia.nomoredomainsmonster.ru/)
+### Figma Project
+[Explore Figma Project](https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev)
 
 
 ## Project Setup Instructions
