@@ -83,11 +83,5 @@ npm start
 # or
 yarn start
 
-### Running the API:
-To run the API, execute the following command within the `api` folder:
-
-npm start
-# or
-yarn start
 
   
