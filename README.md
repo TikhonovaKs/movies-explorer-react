@@ -82,6 +82,3 @@ To run the frontend, execute the following command within the `frontend` folder:
 npm start
 # or
 yarn start
-
-
-  
