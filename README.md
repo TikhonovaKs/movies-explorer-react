@@ -22,4 +22,39 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 ## Project links
 * Web site link: https://diploma-kseniia.nomoredomainsmonster.ru/
 * Figma project: https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev
+
+## Instructions
+To run the project, follow these simple steps:
+
+1. Create a new folder and navigate to it:
+
+    ```bash
+    cd <Folder-Name>
+    ```
+
+2. Clone this repository:
+
+    ```bash
+    git clone https://github.com/endjoyer/movies-explorer-frontend
+    ```
+
+3. Install all dependencies:
+
+    ```bash
+    npm install
+    # or
+    yarn
+    ```
+
+4. Now you can start the project:
+
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
+
+## System Requirements
+To successfully run the project, you will need Node.js version 16.13.2 or newer.
+
   
