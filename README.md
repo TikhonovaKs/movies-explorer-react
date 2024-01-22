@@ -23,22 +23,29 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 * Web site link: https://diploma-kseniia.nomoredomainsmonster.ru/
 * Figma project: https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev
 
-## Instructions
-To run the project, follow these simple steps:
 
-1. Create a new folder and navigate to it:
+## Project Setup Instructions
+To set up this project locally, follow the steps below:
 
-    ```bash
-    cd <Folder-Name>
-    ```
-
-2. Clone this repository:
+1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/endjoyer/movies-explorer-frontend
+    git clone https://github.com/TikhonovaKs/movies-explorer-react.git
     ```
 
-3. Install all dependencies:
+2. **Navigate to the Repository:**
+
+    ```bash
+    cd movies-explorer-react
+    ```
+
+3. **Navigate to the Frontend Folder:**
+
+    ```bash
+    cd frontend
+    ```
+
+4. **Install Frontend Dependencies:**
 
     ```bash
     npm install
@@ -46,15 +53,41 @@ To run the project, follow these simple steps:
     yarn
     ```
 
-4. Now you can start the project:
+5. **Navigate Back to the Main Repository Folder:**
 
     ```bash
-    npm start
-    # or
-    yarn start
+    cd ..
     ```
 
-## System Requirements
-To successfully run the project, you will need Node.js version 16.13.2 or newer.
+6. **Navigate to the API Folder:**
+
+    ```bash
+    cd api
+    ```
+
+7. **Install API Dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn
+    ```
+    
+Now your local setup is complete. You can start working with the frontend and API folders separately.
+
+### Running the Frontend:
+To run the frontend, execute the following command within the `frontend` folder:
+
+```bash
+npm start
+# or
+yarn start
+
+### Running the API:
+To run the API, execute the following command within the `api` folder:
+
+npm start
+# or
+yarn start
 
   
