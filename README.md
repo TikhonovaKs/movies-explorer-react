@@ -1,4 +1,4 @@
-# Study project "movies-explorer-react"
+# Study project "movies-explorer-react": frontend and backend parts
 The final project on the web faculty at Yandex.Practicum
 
 ***This is a service where you can search for movies on demand and save them in your personal account.***>
@@ -57,46 +57,37 @@ To set up this project locally, follow the steps below:
     cd movies-explorer-react
     ```
 
-3. **Navigate to the Frontend Folder:**
+3. **Navigate to the api Folder:**
+
+    ```bash
+    cd api
+    ```
+4. **Running the api (backend part):**
+   
+    ```bash
+    npm run dev
+    ```
+    Make sure you see this success message: "I am listening port 3000" 
+5. **Open a new terminal window. Navigate to the Frontend Folder:**
 
     ```bash
     cd frontend
     ```
 
-4. **Install Frontend Dependencies:**
+6. **Install frontend dependencies:**
 
     ```bash
     npm install
-    # or
-    yarn
     ```
-
-5. **Navigate Back to the Main Repository Folder:**
+7. **Running the frontend part:**
 
     ```bash
-    cd ..
-    ```
+    npm run start
+    ```    
+   ***Make sure you see this success message: "webpack compiled successfully"***
 
-6. **Navigate to the API Folder:**
+8. **Open web site: http://localhost:3001:**
 
-    ```bash
-    cd api
-    ```
-
-7. **Install API Dependencies:**
-
-    ```bash
-    npm install
-    # or
-    yarn
-    ```
+Now you can interact with the web service: register, log in, log out, search, save and delete movies.
     
-Now your local setup is complete. You can start working with the frontend and API folders separately.
 
-### Running the Frontend:
-To run the frontend, execute the following command within the `frontend` folder:
-
-```bash
-npm start
-# or
-yarn start
