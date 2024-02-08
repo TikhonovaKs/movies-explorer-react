@@ -18,6 +18,21 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 * authorized and unauthorized states, saving movies in the profile were worked out;
 * received movies are filtered on the client side.
 
+* Main page
+![open popup to add a new place](./frontend/src/images/readme/main.png)
+
+* Registration page: create your account
+![open popup to add a new place](./frontend/src/images/readme/sign-up.png)
+
+* Login page
+![open popup to add a new place](./frontend/src/images/readme/sign-in.png)
+
+* Movie search page: search for a movie by keyword (use only one letter)
+![open popup to add a new place](./frontend/src/images/readme/search-movies.png)
+
+* Account: Edit your account.
+![open popup to add a new place](./frontend/src/images/readme/account.png)
+![open popup to add a new place](./frontend/src/images/readme/edit-account.png)
 
 ## Project links
 ### Website
