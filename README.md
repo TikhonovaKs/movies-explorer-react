@@ -7,6 +7,11 @@ The final project on the web faculty at Yandex.Practicum
 HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 <br />
 
+## Tools and stack: 
+* HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
+* Third-party libraries: [react-hook-form](https://www.npmjs.com/package/react-hook-form)
+* Custom hooks: "useResize" hook for tracking a screen size / "usePopupClose" for closing the popup outside
+  
 ## Here's what was done:
 * set up infrastructure and created Express server;
 * connected database, created API schemas and resource models;
@@ -36,10 +41,8 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 ![](./frontend/src/images/readme/edit-account.png)
 
 ## Project links
-### Website
-[Visit our website](https://diploma-kseniia.nomoredomainsmonster.ru/)
-### Figma Project
-[Explore Figma Project](https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev)
+### Website: [Visit our website](https://diploma-kseniia.nomoredomainsmonster.ru/)
+### Figma Project: [Explore Figma Project](https://www.figma.com/file/LIZzsFoCCZrF381c6XbWSg/Diploma-(Copy)?node-id=891%3A3857&mode=dev)
 
 
 ## Project Setup Instructions
@@ -67,7 +70,7 @@ To set up this project locally, follow the steps below:
     ```bash
     npm run dev
     ```
-    Make sure you see this success message: "I am listening port 3000" 
+   ***Make sure you see this success message: "I am listening port 3000"*** 
 5. **Open a new terminal window. Navigate to the Frontend Folder:**
 
     ```bash
