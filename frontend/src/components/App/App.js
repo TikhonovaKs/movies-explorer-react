@@ -1,4 +1,3 @@
-// import React from 'react';
 import React from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { ProtectedRoute } from '../ProtectedRoute/ProtectedRoute';
@@ -53,19 +52,16 @@ function App() {
     checkToken();
   }, []);
 
-  // вызываем useNavigate() (переход на другие страницы):
+  // navigate to another pages:
   const navigate = useNavigate();
 
-  // обрабатчик входа пользователя в систему (передаем в Login):
   const handleLogin = ({ email, password }, setError) => {
-    // обращаемся к API для аутентификации пользователя:
     auth
       .login(email, password)
-      // обрабатываем успешное выполнение промиса, получив данные из ответа API в data.
       .then((data) => {
-        // Проверяем, есть ли у полученных данных токен (data.token).
+        // chech if our data has token
         if (data.token) {
-          // Если токен существует, сохраняем токен в локальном хранилище (ключ(jwt) - значение(data.token)):
+          // if it has save "data.token" in 'jwt' key
           localStorage.setItem('jwt', data.token);
           mainApi.setJwt();
           setLoggedIn(true);
@@ -87,7 +83,6 @@ function App() {
     setLoggedIn(false);
   }
 
-  // Обработчик регистрации пользователя:
   const handleRegister = ({ name, email, password }) => {
     auth
       .register(name, email, password)
@@ -127,7 +122,7 @@ function App() {
   const [allMoviesFromPublicApi, setAllMoviesFromPublicApi] = React.useState([]);
   console.log(allMoviesFromPublicApi);
 
-  //эффект обращения к API "beatfilm-movies" для получения всех фильмов:
+  // get all movies from "beatfilm-movies" API
   React.useEffect(() => {
     moviesApi
       .getAllMovies()
@@ -163,7 +158,7 @@ function App() {
             path="/"
             element={
               <>
-                <Header backgroundName="green" isLoggedIn={loggedIn} />
+                <Header backgroundName="green" isLoggedIn={loggedIn} path="/movies" />
                 <Main />
                 <Footer />
               </>
@@ -178,7 +173,12 @@ function App() {
                 element={
                   <>
                     <Header backgroundName="grey" />
-                    <Movies useCache={true} allMoviesFromPublicApi={allMoviesFromPublicApi} path="/movies" key={"movies"}/>
+                    <Movies
+                      useCache={true}
+                      allMoviesFromPublicApi={allMoviesFromPublicApi}
+                      path="/movies"
+                      key={'movies'}
+                    />
                     <Footer />
                   </>
                 }
@@ -194,7 +194,7 @@ function App() {
                 element={
                   <>
                     <Header backgroundName="grey" />
-                    <Movies useCache={false} key={"savedMovies"} />
+                    <Movies useCache={false} key={'savedMovies'} />
                     <Footer />
                   </>
                 }

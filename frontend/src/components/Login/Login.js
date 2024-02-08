@@ -25,7 +25,7 @@ function Login({ handleLogin }) {
   return (
     <div className="authentication">
       <Logo position="center" />
-      <h2 className="authentication__title">Рады видеть!</h2>
+      <h2 className="authentication__title">Glad to see you!</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="authentication__form" name="register" novalidate method="POST">
         <label className="authentication__label" for="input-name">
           E-mail
@@ -80,18 +80,18 @@ function Login({ handleLogin }) {
           {errors?.password && <div className="authentication__error">{errors.password.message}</div>}
         </div>
         <div className="authentication__button-container authentication__button-container_further">
-          {errors?.login?.servererror && <div className="authentication__error">{errors.login.servererror.message}</div>}
-          <button disabled={!isValid} type="submit" className="authentication__button" aria-label="Отправить результат">
-            Войти
+          {errors?.login?.servererror && (
+            <div className="authentication__error">{errors.login.servererror.message}</div>
+          )}
+          <button disabled={!isValid} type="submit" className="authentication__button" aria-label="Send result">
+            Log in
           </button>
         </div>
       </form>
       <div className="authentication__links">
-        <p className="authentication__question">
-          Ещё не зарегистрированы?
-        </p>
+        <p className="authentication__question">Not registered yet?</p>
         <Link to="/signup">
-          <span className="authentication__link">Регистрация</span>
+          <span className="authentication__link">Sign up</span>
         </Link>
       </div>
     </div>

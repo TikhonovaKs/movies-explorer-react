@@ -6,12 +6,12 @@ function NavAuth() {
     <ul className="header__auth-links">
       <li>
         <a href="/signup" className="header__registration-link">
-          Регистрация
+          Sign up
         </a>
       </li>
       <li>
         <a href="/signin" className="header__login-link">
-          Войти
+          Sign in
         </a>
       </li>
     </ul>

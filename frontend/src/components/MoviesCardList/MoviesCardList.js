@@ -33,12 +33,12 @@ function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, i
 
   const cards = sourceMoviesList
     .slice(0, visibleMoviesFromList)
-    .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} path={path}/>);
+    .map((movie) => <MoviesCard movie={movie} handleSaveMovies={handleSaveMovies} path={path} />);
 
-  // ...убираем видимость кнопки Еще
+  // remove visible of more button
   const isButtonHidden = visibleMoviesFromList >= sourceMoviesList.length;
 
-  // Если еще ни разу не искались фильмы или ничего не найдено
+  // If you have never searched for films or found nothing
   if (sourceMoviesList.length === 0 && searchKeyword.length === 0) {
     return <p className="elements__error">Начните поиск фильмов</p>;
   } else if (sourceMoviesList.length === 0 && searchKeyword.length !== 0) {

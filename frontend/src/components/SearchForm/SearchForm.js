@@ -15,7 +15,6 @@ function SearchForm({ handleSearch, handleShortMovies, useCache }) {
     mode: 'onChange',
   });
 
-  // Обработчик изменения полей формы:
   const onSubmit = ({ keyword }) => {
     if (useCache) 
      localStorage.setItem('keywordFilter', keyword);
@@ -40,11 +39,11 @@ function SearchForm({ handleSearch, handleShortMovies, useCache }) {
           })}
           type="text"
           className="search__input"
-          placeholder="Фильм"
+          placeholder="Movie"
           defaultValue={currentKeyword}
         />
 
-        <button className="search__button">Найти</button>
+        <button className="search__button">Find</button>
       </form>
       {errors?.keyword && <div className="search__error">{errors.keyword.message}</div>}
       <FilterCheckbox handleShortMovies={handleShortMovies} useCache={useCache} /> 

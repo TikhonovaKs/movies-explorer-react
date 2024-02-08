@@ -2,8 +2,7 @@ import React from 'react';
 import './MoviesCard.css';
 
 function MoviesCard({ movie, handleSaveMovies, path }) {
-  // Создаём переменную, которую после зададим в `className` для кнопки сохранения фильма 
-  // (крестик для сохраненных фильмов, зеленая кнопка для всех фильмов)
+  // switch `className` for button
   let movieSaveButtonClassName = '';
   if (path === '/movies') {
     movieSaveButtonClassName = `element__save-button ${movie.isActive && 'element__save-button_is-active'}`;
@@ -26,7 +25,7 @@ function MoviesCard({ movie, handleSaveMovies, path }) {
           <button
             onClick={handleButtonClick}
             className={movieSaveButtonClassName}
-            aria-label="Cохранение понравившегося фильма"
+            aria-label="Save favorite movie"
             type="button"
           ></button>
           <h3 className="element__duration">{`${Math.floor(movie.duration / 60)}ч${movie.duration % 60}м`}</h3>

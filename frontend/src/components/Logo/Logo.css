@@ -5,6 +5,11 @@
   align-self: start;
 }
 
+.logo:hover {
+  opacity: 70%;
+  transition: 0.25s ease-in-out;
+}
+
 @media screen and (max-width: 430px) {
   .logo_center {
     align-self: center;
