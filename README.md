@@ -18,7 +18,7 @@ HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 * authorized and unauthorized states, saving movies in the profile were worked out;
 * received movies are filtered on the client side.
 
-
+## Project screenshots:
 ***Main page***
 ![](./frontend/src/images/readme/main.png)
 
