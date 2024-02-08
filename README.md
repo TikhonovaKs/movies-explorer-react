@@ -4,10 +4,6 @@ The final project on the web faculty at Yandex.Practicum
 ***This is a service where you can search for movies on demand and save them in your personal account.***>
 
 ## Tools and stack: 
-HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
-<br />
-
-## Tools and stack: 
 * HTML / CSS / React / Express / MongoDB / NodeJS / API / JWT
 * Third-party libraries: [react-hook-form](https://www.npmjs.com/package/react-hook-form)
 * Custom hooks: "useResize" hook for tracking a screen size / "usePopupClose" for closing the popup outside
