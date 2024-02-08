@@ -9,13 +9,13 @@ function Register({ handleRegister }) {
     register,
     handleSubmit,
     formState: { errors, isValid },
-    reset, // сброс полей
+    reset, // reset 
     setError,
   } = useForm({
-    mode: 'onChange', // режим появления ошибок в полях (отслеживание по кажому введенному символу)
+    mode: 'onChange',// mode of occurrence of errors in fields (tracking for each entered character)
   });
 
-  // Обработчик изменения полей формы:
+  // Form field change handler:
   const onSubmit = (data) => {
     console.log(data);
     handleRegister(data, setError);
@@ -26,7 +26,7 @@ function Register({ handleRegister }) {
   return (
     <div className="authentication">
       <Logo position="center" />
-      <h2 className="authentication__title">Добро пожаловать!</h2>
+      <h2 className="authentication__title">Hi!</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="authentication__form" name="register" novalidate method="POST">
         <label className="authentication__label" for="input-name">
           name
@@ -118,9 +118,9 @@ function Register({ handleRegister }) {
 
       </form>
       <div className="authentication__links">
-        <p className="authentication__question">Уже зарегистрированы?</p>
+        <p className="authentication__question">Already registered?</p>
         <Link to="/signin">
-          <span className="authentication__link">Войти</span>
+          <span className="authentication__link">Sign in</span>
         </Link>
       </div>
     </div>

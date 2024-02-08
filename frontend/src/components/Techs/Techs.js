@@ -5,10 +5,10 @@ import BlockTitle from '../BlockTitle/BlockTitle.js';
 const Techs = React.forwardRef((props, forwardedRef) => {
   return (
     <section className="technologies" id="techs" ref={forwardedRef}>
-      <BlockTitle title="Технологии" />
-      <h2 className="technologies__title">7 технологий</h2>
+      <BlockTitle title="Technologies" />
+      <h2 className="technologies__title">7 technologies</h2>
       <p className="technologies__description">
-        На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.
+        During the web development course, we mastered the technologies that we used in our diploma project.
       </p>
       <ul className="technologies__list">
         <li className="technologies__name">HTML</li>

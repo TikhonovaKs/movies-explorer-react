@@ -18,7 +18,7 @@
   }
   
   .header__registration-link {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: 500;
   }
@@ -36,11 +36,11 @@
   }
   
   .header__login-link {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 8px 20px;
     border-radius: 3px;
-    background-color: #3ddc84;
+    background-color: #303030;
     display: inline-block;
     margin-left: 30px;
   }

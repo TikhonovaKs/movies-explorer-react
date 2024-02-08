@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import './Main.css';
 import Promo from '../Promo/Promo.js';
 import NavTab from '../NavTab/NavTab.js';
@@ -7,7 +7,7 @@ import Techs from '../Techs/Techs.js';
 import AboutMe from '../AboutMe/AboutMe.js';
 
 function Main() {
-  // Создаем объект forwardedRefs, в котором будут храниться рефы для каждого раздела
+  // We create an object called forwardedRefs to store refs for each section (menu)
   const forwardedRefs = {
     aboutProject: useRef(null),
     techs: useRef(null),
@@ -23,9 +23,9 @@ function Main() {
   }
 
   return (
-    <main className='main'>
+    <main className="main">
       <Promo />
-      <NavTab handleNavigationClick={handleNavigationClick}/>
+      <NavTab handleNavigationClick={handleNavigationClick} />
       <AboutProject ref={forwardedRefs.aboutProject} />
       <Techs ref={forwardedRefs.techs} />
       <AboutMe ref={forwardedRefs.aboutMe} />

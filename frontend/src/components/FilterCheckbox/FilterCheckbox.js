@@ -20,7 +20,7 @@ function FilterCheckbox({ handleShortMovies, useCache }) {
           <input type="checkbox" checked={isActive} className="toggle__checkbox" onClick={handleToggle} />
           <span className="toggle__slider" />
         </label>
-        <p className="toggle__name">Короткометражки</p>
+        <p className="toggle__name">Short Films</p>
       </div>
     </ShortMoviesContext.Provider>
   );

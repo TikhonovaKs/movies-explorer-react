@@ -6,7 +6,7 @@ function ButtonSave({ buttonName, position }) {
     <button
       type="submit"
       className={`button-save button-save_${position}`}
-      aria-label="Отправить результат"
+      aria-label="Sent result"
     >
       {buttonName}
     </button >

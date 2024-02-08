@@ -17,6 +17,11 @@
   margin-top: 135px;
 }
 
+.button-save:hover {
+  opacity: 70%;
+  transition: 0.25s ease-in-out;
+}
+
 .button-save_further {
   margin-top: 221px;
 }

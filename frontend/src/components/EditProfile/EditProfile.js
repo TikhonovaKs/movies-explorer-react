@@ -28,7 +28,7 @@ function EditProfile({ onUpdateUser }) {
   return (
     <div className="authentication">
       <Logo position="center" />
-      <h2 className="authentication__title">Редактирование профиля</h2>
+      <h2 className="authentication__title">Profile Editing</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="authentication__form" name="register" novalidate method="POST">
         <label className="authentication__label" for="input-name">
           name
@@ -103,14 +103,14 @@ function EditProfile({ onUpdateUser }) {
             <div className="authentication__error">{errors.login.servererror.message}</div>
           )}
           <button disabled={!isValid} type="submit" className="authentication__button" aria-label="Отправить результат">
-            Сохранить
+            Save
           </button>
         </div>
       </form>
       <div className="authentication__links">
-        <p className="authentication__question">Передумали?</p>
+        <p className="authentication__question">Changed your mind?</p>
         <Link to="/profile">
-          <span className="authentication__link">Назад в профиль</span>
+          <span className="authentication__link">Back to profile</span>
         </Link>
       </div>
     </div>

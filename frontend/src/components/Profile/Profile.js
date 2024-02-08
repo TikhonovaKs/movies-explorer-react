@@ -23,12 +23,12 @@ function Profile({ handleSignout, handleUpdateUser }) {
       <div className="profile__buttons">
         <Link to="/edit-profile">
           <span className="profile__button-edit" currentUser={currentUser}>
-            Редактировать
+            Edit
           </span>
         </Link>
         <Link to="/">
           <span className="profile__button-signout" onClick={handleSignout}>
-            Выйти из аккаунта
+            Log out
           </span>
         </Link>
       </div>

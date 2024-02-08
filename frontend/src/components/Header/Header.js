@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo.js';
 import NavAuth from '../NavAuth/NavAuth.js';
 import Navigation from '../Navigation/Navigation';
 
-function Header({ backgroundName, isLoggedIn }) {
+function Header({ backgroundName, isLoggedIn, path }) {
   const location = useLocation();
 
   const hasNavigation = ['/movies', '/profile', '/saved-movies'].includes(location.pathname);
@@ -14,9 +14,9 @@ function Header({ backgroundName, isLoggedIn }) {
   return (
     <header className={`header header_type_${backgroundName}`}>
       <Link to="/">
-        <Logo />
+        <Logo path={path} />
       </Link>
-      {isLoggedInNavigation ? <Navigation /> : <NavAuth />}
+      {isLoggedInNavigation ? <Navigation path={path} /> : <NavAuth />}
     </header>
   );
 }

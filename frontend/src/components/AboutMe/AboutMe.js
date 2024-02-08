@@ -4,18 +4,19 @@ import BlockTitle from '../BlockTitle/BlockTitle.js';
 import myPhoto from '../../images/my-photo.png';
 import Portfolio from '../Portfolio/Portfolio.js';
 
-const AboutMe = React.forwardRef((props, forwardedRef) =>  {
+const AboutMe = React.forwardRef((props, forwardedRef) => {
   return (
     <section className="student" id="aboutMe" ref={forwardedRef}>
-      <BlockTitle title="Студент" />
+      <BlockTitle title="About me" />
       <div className="student__profile">
         <div className="student__info">
-          <h2 className="student__name">Kseniia</h2>
+          <h2 className="student__name">Kseniia Tikhonova</h2>
           <h3 className="student__job">Frontend Developer</h3>
           <p className="student__about">
-            Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать
-            музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После
-            того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.
+            I'm a junior frontend developer on the path to becoming a professional in this exciting field. I
+            successfully completed an online school program with Yandex and am currently advancing my skills at Hyper
+            Island. I have a knack for quick learning and a strong interest in continuous technical growth. My goal is
+            to build a long-term career focused on professional development
           </p>
           <a target="_blank" href="#" className="student__github">
             Github
