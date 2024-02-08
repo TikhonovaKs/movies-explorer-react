@@ -1,4 +1,4 @@
-# "movies-explorer-react": frontend and backend parts
+# "movies-explorer-react". frontend and backend parts
 The final study project on the web faculty at Yandex.Practicum
 
 ***This is a service where you can search for movies on demand and save them in your personal account.***
