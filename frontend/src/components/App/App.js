@@ -127,7 +127,6 @@ function App() {
     moviesApi
       .getAllMovies()
       .then((data) => {
-        // call-back function
         setAllMoviesFromPublicApi(
           data.map((item) => {
             return {

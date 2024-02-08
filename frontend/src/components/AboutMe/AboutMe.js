@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutMe.css';
 import BlockTitle from '../BlockTitle/BlockTitle.js';
 import myPhoto from '../../images/my-photo.png';
-import Portfolio from '../Portfolio/Portfolio.js';
+// import Portfolio from '../Portfolio/Portfolio.js';
 
 const AboutMe = React.forwardRef((props, forwardedRef) => {
   return (
@@ -18,13 +18,16 @@ const AboutMe = React.forwardRef((props, forwardedRef) => {
             Island. I have a knack for quick learning and a strong interest in continuous technical growth. My goal is
             to build a long-term career focused on professional development
           </p>
-          <a target="_blank" href="#" className="student__github">
-            Github
+          <a target="_blank" href="https://github.com/TikhonovaKs" className="student__github">
+            My Github
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/ksenia-tikhonova/" className="student__github">
+            My Linkedin
           </a>
         </div>
         <img className="student__image" src={myPhoto} alt="Student photo" />
       </div>
-      <Portfolio />
+      {/* <Portfolio /> */}
     </section>
   );
 });

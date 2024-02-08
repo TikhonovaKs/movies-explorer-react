@@ -14,7 +14,7 @@ function Footer() {
             </a>
           </li>
           <li class="footer__list-item">
-            <a href="#" class="footer__link">
+            <a href="https://github.com/TikhonovaKs" class="footer__link">
               Github
             </a>
           </li>

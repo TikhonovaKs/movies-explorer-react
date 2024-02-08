@@ -7,7 +7,6 @@ import Preloader from '../Preloader/Preloader';
 function MoviesCardList({ moviesList, savedMoviesList, path, handleSaveMovies, isLoading, searchKeyword }) {
   const { isScreenXl, isScreenMd, isScreenSm } = useResize();
 
-  // Отображение нужного кол.ва карточек в зависимости отразмера экрана
   const visibleMoviesMap = {
     isScreenXl: 16,
     isScreenMd: 8,

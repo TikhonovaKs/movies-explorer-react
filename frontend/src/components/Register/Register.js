@@ -9,13 +9,12 @@ function Register({ handleRegister }) {
     register,
     handleSubmit,
     formState: { errors, isValid },
-    reset, // reset 
+    reset,
     setError,
   } = useForm({
-    mode: 'onChange',// mode of occurrence of errors in fields (tracking for each entered character)
+    mode: 'onChange',
   });
 
-  // Form field change handler:
   const onSubmit = (data) => {
     console.log(data);
     handleRegister(data, setError);
@@ -112,7 +111,7 @@ function Register({ handleRegister }) {
         <div className="authentication__button-container authentication__button-container_further">
           {errors?.login?.servererror && <div className="authentication__error">{errors.login.servererror.message}</div>}
           <button disabled={!isValid} type="submit" className="authentication__button" aria-label="Отправить результат">
-          Зарегестрироваться
+          Sign up
           </button>
         </div>
 

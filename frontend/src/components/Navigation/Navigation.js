@@ -29,7 +29,6 @@ function Navigation({ path }) {
         <img src={profileLogo} alt="profile logo" className="navigation__logo" />
         <span className="navigation__account">Account</span>
       </Link>
-      {/* <button className="navigation__hidden-menu" aria-label="Drop down menu button" type="button"></button> */}
     </div>
   );
 }
