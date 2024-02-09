@@ -2,7 +2,6 @@ require('dotenv').config();
 
 console.log(process.env.NODE_ENV); // production
 
-// хеширование паролей и сравнение хэшей паролей с их исходными значениями:
 const bcrypt = require('bcryptjs');
 const jsonWebToken = require('jsonwebtoken');
 const User = require('../models/user');
@@ -45,12 +44,6 @@ const login = (req, res, next) => {
       .then((isValidUser) => {
         if (isValidUser) {
           const jwt = jsonWebToken.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '1w' });
-          // res.cookie('jwt', jwt, {
-          //   maxAge: 36000,
-          //   // domain: NODE_ENV === 'production' ? '.nomoreparties.sbs' : 'localhost',
-          //   // httpOnly: false,
-          //   // sameSite: true,
-          // });
           res.send({ ...user.toJSON(), token: jwt });
         } else {
           throw new UnauthorizedError('Incorrect password or email');
@@ -64,22 +57,6 @@ const login = (req, res, next) => {
       }
     });
 };
-
-// const getUserById = (req, res, next) => {
-//   User.findById(req.params.id)
-//     .then((user) => {
-//       if (user) return res.send({ user });
-
-//       throw new NotFoundError('User with this Id not found');
-//     })
-//     .catch((err) => {
-//       if (err.name === 'CastError') {
-//         next(new BadRequestError('Incorrect ID'));
-//       } else {
-//         next(err);
-//       }
-//     });
-// };
 
 const getUserInfo = (req, res, next) => {
   User.findById(req.user._id)
@@ -115,30 +92,6 @@ const updateUser = (req, res, next) => {
       }
     });
 };
-
-// const updateUser = (req, res, next) => {
-//   User.findByIdAndUpdate(
-//     req.user._id,
-//     { name: req.body.name, email: req.body.email },
-//     // Передадим объект опций:
-//     {
-//       new: true, // обработчик then получит на вход обновлённую запись
-//       runValidators: true, // данные будут валидированы перед изменением
-//     },
-//   )
-//     .then((user) => {
-//       if (user) { return res.send({ user }); }
-//       next(new NotFoundError('User with this id not found'));
-//       return null;
-//     })
-//     .catch((err) => {
-//       if (err.name === 'ValidationError') {
-//         next(new BadRequestError('Incorrect data passed during user updating'));
-//       } else {
-//         next(err);
-//       }
-//     });
-// };
 
 module.exports = {
   getUserInfo,
